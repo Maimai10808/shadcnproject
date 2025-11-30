@@ -1,6 +1,8 @@
 import { LogOut, Moon, Settings, User } from "lucide-react";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import DarkModeToggleButton from "@/components/components/button/DarkModeToggleButton";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,7 +20,8 @@ export default function AppSidebar() {
       {/* RIGHT */}
       <div className="flex items-center gap-4">
         <Link href="/">Dashboard</Link>
-        <Moon />
+
+        <DarkModeToggleButton />
 
         <DropdownMenu>
           <DropdownMenuTrigger>
@@ -31,15 +34,15 @@ export default function AppSidebar() {
             <DropdownMenuLabel>My Account</DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              <User className="h-[1.2rem] w-[1.2rem] mr-2"/>
+              <User className="h-[1.2rem] w-[1.2rem] mr-2" />
               Profile
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Settings className="h-[1.2rem] w-[1.2rem] mr-2"/>
+              <Settings className="h-[1.2rem] w-[1.2rem] mr-2" />
               Setting
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <LogOut className="h-[1.2rem] w-[1.2rem] mr-2"/>
+              <LogOut className="h-[1.2rem] w-[1.2rem] mr-2" />
               Logout
             </DropdownMenuItem>
           </DropdownMenuContent>
